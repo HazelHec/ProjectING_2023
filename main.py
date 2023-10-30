@@ -1,8 +1,19 @@
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
+from controllersProyect import routers
+from fastapi import requests
 
-app = FastAPI()
 
+engi = FastAPI()
+for router in routers: 
+    engi.include_router(router)
 
-@app.route('/')
-def index():
-    return "Hola mundo"
+engi.title = "Mi aplicacion con FastAPI"
+
+#Para cambiar la version de la aplicacion
+engi.version = "0.0.1"
+
+@engi.get("/", tags=['cast'])
+def home():
+    return HTMLResponse('<h1>Hola mundo</h1>')
+
