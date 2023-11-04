@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+
+#contenedor_principal{
+    
+    width: 60%;
+    height: 60%;
+ display:flex;  
+ backdrop-filter: blur(0.4rem); 
+padding: 5%;
+margin: 0 auto;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+border: 1px solid white;
+-webkit-backdrop-filter: blur(00.4rem);
+
+}
+
+
+#Texto{
+    margin-right: 5px;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    top: 50%;
+    justify-content: center ;
+
+}
+#menu1{
+    top: 50%;
+    left: 50%;
+    color: aliceblue;
+    display: grid;
+    align-items: center ;
+    width: auto;
+    height: 90%;
+ 
+    
+    
+}
+.li{
+    display:flex;
+    align-items: center;
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid white;
+    
+}
+li a{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 2%;
+    height: 2%;
+   }
+body{
+    width: 500px;
+    background-image: url(Imagenes/plataforma-petrolera-oceano-puesta-sol-detras-ella.jpg) ;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 20em;
+    margin-bottom: 2%;
+ 
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.logo{
+    max-width: 5rem;
+    height: 5rem;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.nav-list li a{
+    text-decoration: none;
+    color:white;
+}
+
+#contenedor_principal2{
+display:flex;  
+ backdrop-filter: blur(0.4rem); 
+padding: 5%;
+margin: 0 auto;
+border: 1px solid white;
+-webkit-backdrop-filter: blur(00.4rem);
+margin-left: 2%;
+margin-right: 2%;
+position: relative;
+}
+
+
+.abrir-menu,
+.cerrar-menu{
+    display: none;
+}
+@media screen and (max-width: 1000px) {
+    .abrir-menu, 
+    .cerrar-menu{
+        display: block;
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+       
+    }
+    
+    
+    .nav {
+        display:none ;
+       
+    }
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color:black;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgb(0,0 ,0, .5);
+        z-index: 1;
+    }
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+
+    }
+}
