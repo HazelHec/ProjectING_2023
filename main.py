@@ -8,10 +8,10 @@ engi = FastAPI()
 for router in routers: 
     engi.include_router(router)
 
-engi.title = "Mi aplicacion con FastAPI"
+engi.title = "Proyecto productividad"
 
 #Para cambiar la version de la aplicacion
-engi.version = "0.0.1"
+# engi.version = "0.0.1"
 
 @engi.get("/", tags=['cast'])
 def home():

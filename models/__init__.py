@@ -1,2 +1,3 @@
-from models import Productividad
-modelos = [ Productividad ]
+from models.Productividad import Vogel, VogelArray
+
+__all__ = ['Vogel', 'VogelArray']
