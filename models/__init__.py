@@ -1,3 +1,3 @@
-from models.Productividad import Vogel, VogelArray
+from models.Productividad import Vogel
 
-__all__ = ['Vogel', 'VogelArray']
+__all__ = ['Vogel']

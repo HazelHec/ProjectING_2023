@@ -1,26 +1,28 @@
 from fastapi import APIRouter
 from fastapi import Request
-from fastapi.responses import HTMLResponse
+
+# from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from models import *
-templates = Jinja2Templates(directory='templates/')
+
+templates = Jinja2Templates(directory="templates/Productividad")
 
 productividad = APIRouter()
 
 
-@productividad.get('/productividad/', tags=['Productividad'])
+@productividad.get("/productividad/", tags=["Productividad"])
 async def view(request: Request):
-    return templates.TemplateResponse('index.html', {"request": request})
+    return templates.TemplateResponse("/Vogel_generalizado.html", {"request": request})
 
 
-@productividad.post('/productividad/voguel', tags=['Productividad'])
+@productividad.post("/productividad/voguel", tags=["Productividad"])
 async def vogel(vogel: Vogel):
-  if pwf >= pb:
-    caseA(qo, pr, pwf, pb, r)
+    if vogel.pwf >= vogel.pb:
+        caseA = VogelCaseA(vogel.qo, vogel.pr, vogel.pwf, vogel.pb, vogel.r)
+        return caseA
     else:
-    caseB(qo, pr, pwf, pb, r)
-    caseA = VogelCaseA(vogel.qo, vogel.pr, vogel.pwf, vogel.pb, vogel.r)
-    return caseA
+        caseB = VogelCaseB(vogel.qo, vogel.pr, vogel.pwf, vogel.pb, vogel.r)
+        return caseB
 
 
 def VogelCaseA(qo, pr, pwf, pb, r):
@@ -43,25 +45,22 @@ def VogelCaseA(qo, pr, pwf, pb, r):
             lqob[i] = J * (pr - i)
         else:
             lqos[i] = round(
-                qc * (1.8 * (pr / pb) - 0.8 - 0.2 *
-                      (i / pb) - 0.8 * pow((i / pb), 2)), 3
+                qc * (1.8 * (pr / pb) - 0.8 - 0.2 * (i / pb) - 0.8 * pow((i / pb), 2)),
+                3,
             )
-    lqos[0] = round(
-        qc * (1.8 * (pr / pb) - 0.8), 3
-    )
-    return {'J': J, 'qb': qb, 'qc': qc, 'lpwf': lpwf, 'lqos': lqos}
+    lqos[0] = round(qc * (1.8 * (pr / pb) - 0.8), 3)
+    return {"J": J, "qb": qb, "qc": qc, "lpwf": lpwf, "lqos": lqos}
 
 
 def VogelCaseB(qo, pr, pwf, pb, r):
     # Paso 1 Calcular el valor de qc
-    qc = qo / (1.8 * (pr / pb) - 0.8 - 0.2 *
-               (pwf / pb) - 0.8 * pow((pwf / pb), 2))
+    qc = qo / (1.8 * (pr / pb) - 0.8 - 0.2 * (pwf / pb) - 0.8 * pow((pwf / pb), 2))
     # print(f'qc = {qc}')
     # Paso 3 Calcular el gasto a la presión de burbuja
-    qb = (qc * 1.8 * (pr-pb)) / pb
+    qb = (qc * 1.8 * (pr - pb)) / pb
     # print(f'qb = {qb}')
     # Paso4 Determinar el índice de productividad4.Determinar el índice de productividad
-    J = qb / (pr-pb)
+    J = qb / (pr - pb)
     # print(f'IP = {J}')
     # Paso 2 Calcular el gasto para cualquier presión de fondo fluyente por debajo de la presión de burbuja
     # print(int(pwf / r))
@@ -73,10 +72,8 @@ def VogelCaseB(qo, pr, pwf, pb, r):
             lqob[i] = J * (pr - i)
         else:
             lqos[i] = round(
-                qc * (1.8 * (pr / pb) - 0.8 - 0.2 *
-                      (i / pb) - 0.8 * pow((i / pb), 2)), 3
+                qc * (1.8 * (pr / pb) - 0.8 - 0.2 * (i / pb) - 0.8 * pow((i / pb), 2)),
+                3,
             )
-    lqos[0] = round(
-        qc * (1.8 * (pr / pb) - 0.8), 3
-    )
-    return {'qc': qc, 'qb': qb, 'J': J, 'lpwf': lpwf, 'lqos': lqos}
+    lqos[0] = round(qc * (1.8 * (pr / pb) - 0.8), 3)
+    return {"qc": qc, "qb": qb, "J": J, "lpwf": lpwf, "lqos": lqos}
