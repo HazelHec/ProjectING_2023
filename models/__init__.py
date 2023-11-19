@@ -1,3 +1,3 @@
-from models.Productividad import Vogel
+from models.Productividad import VogelModel, BackPressureModel, EickmeierModel, StandingModel
 
-__all__ = ['Vogel']
+__all__ = ['VogelModel', 'BackPressureModel', 'EickmeierModel', 'StandingModel']

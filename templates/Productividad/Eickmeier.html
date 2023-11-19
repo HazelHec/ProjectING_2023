@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <LInk REL="stylesheet" type="text/css" href="../main.css" >
+    <link rel="stylesheet" href="{{ url_for('static', path='css/bootstrap-icons.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='css/main.css') }}">
 
     <title>Productividad de pozos</title>
 </head>
+
 <body>
     <header>
-        <img class="logo" src="../Imagenes/fiunam.png" alt="logo">
+        <img class="logo" src="{{ url_for('static', path='img/fiunam.png') }}" alt="logo">
         <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
         <nav class="nav" id="nav">
             <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-circle"></i></button>
             <ul class="nav-list">
-                <li><a href="../index.html">Inicio</a</li>
+                <li><a href="../index.html">Inicio</a< /li>
                 <li><a href="../Biografia/Biografia.html">Biografia</a></li>
                 <li><a href="../vogel/Vogel_generalizado.html">Vogel generalizado</a></li>
                 <li><a href="../Back Pressure/back-pressure.html">Back Pressure</a></li>
@@ -25,20 +27,20 @@
         </nav>
 
     </header>
-    
-        
+
+
 
     <div id="contenedor_principal2">
-      
-    <p>hola khe hace</p>
 
-   </div>
+        <p>hola khe hace</p>
 
-
+    </div>
 
 
 
-<script src="../main.js"></script>
+
+
+    <script src="{{ url_for('static', path='js/main.js') }}"></script>
 </body>
 
 

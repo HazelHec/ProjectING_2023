@@ -1,7 +1,7 @@
 
 <body>
     <header>
-        <img class="logo" src="../Imagenes/fiunam.png" alt="logo">
+        <img class="logo" src="{{ url_for('static', path='img/fiunam.png') }}" alt="logo">
         <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
         <nav class="nav" id="nav">
             <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-circle"></i></button>
@@ -30,5 +30,5 @@
 
 
 
-<script src="../main.js"></script>
+<script src="{{ url_for('static', path='js/main.js') }}"></script>
 </body>
