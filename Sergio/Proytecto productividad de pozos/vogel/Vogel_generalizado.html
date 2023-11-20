@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="IE=edge">
+    <script src="../main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+
+    <title>Productividad de pozos</title>
+</head>
+
+
+<body class="body2">
+    <header>
+        <img class="logo" src="../Imagenes/fiunam.png" alt="logo">
+        <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i> </button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-lg"></i></button>
+            <ul class="nav-list">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Biografia/Biografia.html">Biografia</a></li>
+                <li><a href="../vogel/Vogel_generalizado.html">Vogel generalizado</a></li>
+                <li><a href="../Back Pressure/back-pressure.html">Back Pressure</a></li>
+                <li><a href="../Eickmeier/Eickmeier.html">Eickmeier</a></li>
+                <li><a href="../Standing/standing.html">Standing</a></li>
+                <li><a href="../Agradecimientos/agradecimientos.html">Agradecimientos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="contenedor_principal2">
+        <div class="parrafos">
+            <h1> Método de Vogel <br><br></h1>
+            <p style="color: black">
+                <br>1.- Antecedentes: El método de Vogel es una técnica ampliamente utilizada en la industria del petróleo y gas para generar una curva de Índice de Productividad (IPR), que representa la relación entre la tasa de producción de petróleo y la presión de fondo fluyente en un pozo.<br><br>
+                Esta curva es una herramienta esencial para entender el potencial de producción de un pozo y para planificar las operaciones de producción. <br><br>
+                2.- Objetivos: El objetivo principal de este trabajo es aplicar el método de Vogel para generar la curva IPR de un pozo de petróleo específico.<br><br>
+                Esto nos permitirá entender el potencial de producción del pozo y predecir su comportamiento de producción para diferentes presiones de fondo fluyente. <br><br>
+                Además, buscaremos identificar cualquier variación en la tasa de producción de petróleo con la presión de fondo fluyente que pueda indicar problemas potenciales en el pozo.<br><br>
+                3.- Metodología: <br><br>
+                a: Recopilación de datos:<br><br>
+                Presión estática del yacimiento.<br><br>
+                Presión de fondo fluyente.<br><br>
+                Tasa de producción de petróleo.<br><br>
+                b: Utilización de la ecuación de Vogel:<br><br>
+                Calcularemos el Índice de Productividad utilizando la ecuación de Vogel.<br><br>
+                Calcularemos la tasa de producción de petróleo para diferentes presiones de fondo fluyente utilizando la misma ecuación.<br><br>
+                c: Generación de la curva IPR:<br><br>
+                Utilizaremos los datos obtenidos para generar la curva IPR (Índice de Productividad vs. Presión de fondo fluyente).<br><br>
+                4: Modelo matemático: El modelo matemático se basa en una serie de ecuaciones que calculan la tasa de producción de petróleo para diferentes presiones de fondo fluyente. <br><br>
+                Maximiza el potencial petrolero con el método de Vogel: predice y optimiza<br><br><br><br>
+             </p>
+            <img src="../Imagenes/Vogel.jpeg" alt="">
+        
+        </div>
+
+        <form id="miFormulario">
+            <label for="PWS"> <p>PWS:<br></p></label>
+            <input type="text" id="PWS" name="PWS" required class="field"><br>
+    
+            <label for="PWF"><br><p>PWF: <br></p></label>
+            <input type="text" id="PWF" name="PWF" required class="field"><br>
+    
+            <label for="Produccion"><br> <p>Produccion:<br></p></label>
+            <input type="text" id="Produccion" name="Produccion" required class="field"><br>
+    
+        </form> 
+        <p><br><br></p>
+        <button type="button" >calcular datos</button> 
+    
+       
+
+        <canvas id="myChart"></canvas>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="Gdatos.js"></script>
+        <script src="graficas.js"></script>
+        </body>
+    
+    </html>

@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+
+   
+}
+
+#contenedor_principal{
+    
+width: 60%;
+height: 60%;
+ display:flex;  
+margin: 0 auto;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+border: 1px solid white;
+background-image: url(Imagenes/plataforma-petrolera-oceano-puesta-sol-detras-ella.jpg);
+background-position-x: center;
+background-position-y: center;
+background-size: 200%;
+background-repeat: no-repeat;
+}
+
+
+#Texto{
+    margin-right: 5px;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    top: 50%;
+    justify-content: center ;
+    width: 50%;
+    font-size: clamp (2em, 5vw, 5em);
+
+}
+#menu1{
+
+    margin-left: 5px;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+   
+    top: 50%;
+    justify-content: center ;
+    width: 50%;
+}
+.title{
+padding: auto;
+color: white;
+font-size: calc(1em,5vw,10em);
+margin-left: 20%;
+margin-right: 0;
+
+}
+
+.li{
+   display:flex;
+    align-items: center;
+    list-style: none;
+    margin-top: auto;
+    margin-bottom: auto;
+ border-bottom: 2px solid white;
+    font-size: calc(1em,5vw,10em);
+text-align: center;
+margin-top: 30%;
+margin-bottom: 10%;
+    
+}
+li a{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 2%;
+    height:auto;
+    text-decoration: none;
+    color: white;
+    justify-content: center;
+
+   }
+body{
+    width: 500px;
+   background-image: url(Imagenes/Desenfoque.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 20em;
+    background-position-x: center;
+    background-position-y: center;
+
+ 
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.logo{
+    max-width: 5rem;
+    height: 5rem;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+
+#contenedor_principal2{
+display:flex;  
+padding: 5%;
+margin: 0 auto;
+border: 1px solid white;
+margin-left: 3%;
+margin-right: 3%;
+background-image: url(Imagenes/plataforma-petrolera-oceano-puesta-sol-detras-ella.jpg);
+background-position-x: center;
+background-position-y: center;
+background-size: 120%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+
+}
+
+
+
+.abrir-menu,
+.cerrar-menu{
+    display: none;
+}
+@media screen and (max-width: 1000px) {
+    .abrir-menu, 
+    .cerrar-menu{
+        display: block;
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+       
+    }
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+    }
+     
+       
+    
+    .nav{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color:black;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgb(0,0 ,0, .5);
+        z-index: 1;
+    }
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+
+    }
+}
+#contenedor_principal2 {
+    display: flex;
+    flex-direction: column;
+ 
+align-items: center;  
+}
+
+form{
+    margin: 0 auto;
+    width: 300px;
+    background-color: white;
+    opacity: 0.8;
+    padding: 2%;
+ border-radius: 3px;
+}
+
+.field{
+    padding: 2%;
+    width: 90%;
+}
+
+
+button{
+    margin: 0 auto;
+    width: 300px;
+    border-radius: 3px;
+    padding: 2%;
+  
+}
+
+
+    #miFormulario2 {
+        column-count: 2;
+        column-gap: 2%; 
+        width:  90%;;
+        margin: auto; 
+    }
+
+    
+    label {
+       /* display: block;*/
+        margin-bottom: 5px;
+    }
+
+    .field {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 1px;
+    }
+
+
+.parrafos{
+    background-color: white;
+    opacity: 0.8;
+padding: 2%;
+margin-bottom: 5%;
+}
+
+#myChart{
+z-index: 1;
+}
+
+
+canvas {
+    max-width: 80%;
+    margin: 20px;
+    background-color: white;
+    opacity: 0.8;
+  }
+  
+
+
+  
