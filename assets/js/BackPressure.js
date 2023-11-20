@@ -51,51 +51,47 @@ function graficar(x,y) {
   pwf = y;
   qo = x;
   // Datos del gráfico
-  var chartData = {
-    labels: qo,
-    datasets: [
-      {
-        label: "IPR",
-        backgroundColor: "rgba(75, 192, 192, 0.2)",
-        borderColor: "rgba(75, 192, 192, 1)",
-        borderWidth: 1,
-        data: pwf,
-        fill: false,
-      },
-    ],
-  };
+ // Datos del gráfico
+ var chartData = {
+  labels: qo,
+  datasets: [{
+    label: 'BackPressure',
+    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+    borderColor: 'rgba(75, 192, 192, 1)',
+    borderWidth: 1,
+    data: pwf
+  }]
+};
 
-  // Configuración del gráfico
-  var chartOptions = {
-    responsive: true,
-    scales: {
-      x: {
-        title: {
-          display: true,
-          text: "Qo",
-        },
-      },
-      y: {
-        title: {
-          display: true,
-          text: "Pwf",
-        },
-      },
+// Configuración del gráfico con escala logarítmica
+var chartOptions = {
+  scales: {
+    x: {
+      type: 'logarithmic',
+      title: {
+        display: true,
+        text: 'Eje X (Logarítmico)'
+      }
     },
-  };
+    y: {
+      type: 'logarithmic',
+      title: {
+        display: true,
+        text: 'Eje Y (Logarítmico)'
+      },
+      beginAtZero: true
+    }
+  }
+};
 
-  // Crear el gráfico
-  var ctx = document.getElementById("myChart").getContext("2d");
-  var myChart = new Chart(ctx, {
-    type: "line",
-    data: chartData,
-    options: chartOptions,
-    legend: {
-      display: true,
-    },
-    tooltips: {
-      mode: "index",
-      intersect: false,
-    },
-  });
+// Crear el gráfico
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'line', // Cambiado a tipo de gráfico de línea para mejorar la visualización logarítmica
+  data: chartData,
+  options: chartOptions
+});
 }
+
+
+      
