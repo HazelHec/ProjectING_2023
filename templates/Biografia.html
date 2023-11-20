@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/main.css') }}">
+
+    <title>Productividad de pozos</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="{{ url_for('static', path='img/fiunam.png') }}" alt="logo">
+        <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i> </button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-lg"></i></button>
+            <ul class="nav-list">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/biografia">Biografia</a></li>
+                <li><a href="vogel">Vogel generalizado</a></li>
+                <li><a href="back-pressure">Back Pressure</a></li>
+                <li><a href="eickmeier">Eickmeier</a></li>
+                <li><a href="standing">Standing</a></li>
+                <li><a href="/agradecimientos">Agradecimientos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div id="contenedor_principal2">
+
+        <div class="parrafos">
+            <p><b>BIBLIOGRAFÍA</b><br><br>
+                • Referencia: [1] Vogel, J.V. (1968) Inflow Performance Relationships for Solution-Gas Drive Wells.
+                Journal of Petroleum Technology, 20, 83-92. <br><br><br>
+                • Craft, B. C., & Hawkins, M. F. (1959). Applied petroleum reservoir engineering. Prentice
+                Hall.<br><br><br>
+                • Edmeir, P. (1982). Future IPR from reservoir and well data. Journal of Petroleum Technology, 34(09),
+                1-864.</p><br><br><br>
+        </div>
+    </div>
+</body>
+<script src="{{ url_for('static', path='js/Standing.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', path='js/jquery.min.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+
+</html>

@@ -1,45 +1,155 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', path='css/bootstrap-icons.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='css/main.css') }}">
 
-    <title>Productividad de pozos</title>
-</head>
-<body>
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', path='css/main.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <title>Productividad de pozos</title>
+    </head>
+
+<body class="body2">
     <header>
-        <img class="logo" src="../Imagenes/fiunam.png" alt="logo">
-        <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+        <img class="logo" src="{{ url_for('static', path='img/fiunam.png') }}" alt="logo">
+        <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i> </button>
         <nav class="nav" id="nav">
-            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-circle"></i></button>
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-lg"></i></button>
             <ul class="nav-list">
-                <li><a href="../index.html">Inicio</a</li>
-                <li><a href="../Biografia/Biografia.html">Biografia</a></li>
-                <li><a href="../vogel/Vogel_generalizado.html">Vogel generalizado</a></li>
-                <li><a href="../Back Pressure/back-pressure.html">Back Pressure</a></li>
-                <li><a href="../Eickmeier/Eickmeier.html">Eickmeier</a></li>
-                <li><a href="../Standing/standing.html">Standing</a></li>
-                <li><a href="../Agradecimientos/agradecimientos.html">Agradecimientos</a></li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/biografia">Biografia</a></li>
+                <li><a href="vogel">Vogel generalizado</a></li>
+                <li><a href="back-pressure">Back Pressure</a></li>
+                <li><a href="eickmeier">Eickmeier</a></li>
+                <li><a href="standing">Standing</a></li>
+                <li><a href="/agradecimientos">Agradecimientos</a></li>
             </ul>
         </nav>
-
     </header>
-    
-        
 
     <div id="contenedor_principal2">
-      
-    <p>hola khe hace</p>
+        <div class="parrafos">
+            <h1> Método de Standing (Muskat+Vogel)</h1>
+            <p style="color: black">
 
-   </div>
+                <br>
+                Como se mencionó anteriormente, Vogel no considera los daños de formación (𝑆); posteriormente, Standing
+                (1970), toma el problema que Vogel dejó y demuestra una solución para este.
+                <br> <br>
+
+                <br>Para esto, parte de la premisa que la presión de fondo fluyente se verá afectada debido a la caída
+                de presión ∆𝑃𝑠 ; es por esto que él denominó 𝑃𝑤𝑓 ′ a la presión de fondo fluyente ideal y 𝑃𝑤𝑓a
+                la presión de fondo fluyente real.
+
+                <br>La relación entre el "Drawdown" que es la diferencia de presiones (∆𝑃 = 𝑃𝑅 ̅̅̅ − 𝑃𝑤𝑓) real e
+                ideal las denominó eficiencia de flujo, representada en la ecuación
 
 
+                <br> <br>El método requiere de datos de permeabilidad relativa del aceite, viscosidad y factor de
+                volumen en función de la presión del yacimiento.<br>
+                La saturación del aceite como función de la presión promedio del yacimiento, puede determinarse
+                utilizando balance de materia, por lo tanto, la permeabilidad relativa del aceite puede ser determinada
+                si los datos de permeabilidad se conocen. <br><br>
+                Las propiedades de los fluidos (viscosidad y factor de volumen) pueden obtenerse de análisis de
+                laboratorio o correlaciones empíricas.
+            </p>
+            <img src="{{ url_for('static', path='img/std1.jpeg') }}" alt="">
+            <p>
+                <br> <br>
+            </p>
+            <img src="{{ url_for('static', path='img/std2.jpeg') }}" alt="">
+
+            <p>
+                <br>Que es la ecuación del método de Standing. Tiempo después de su demostración, se determinó que esta
+                ecuación no es viable para valores de EF mayores a 1. Para que sea utilizable, esta ecuación debe
+                cumplir las siguientes dos condiciones
+                <br>
+            </p>
+            <img src="{{ url_for('static', path='img/std3.jpeg') }}" alt="">
+            <p>Se mencionó anteriormente que estas dos condiciones se cumplen siempre para una EF menor o igual que uno.
+                <br>
+
+                Si no se cumplen estas condiciones, entonces solo se puede determinar el 𝑞𝑀á𝑥 para dicha eficiencia
+                mediante la correlación de Standing, enunciada en la ecuación (2.49) <br>
+            </p>
+
+            <img src="{{ url_for('static', path='img/std4.jpeg') }}" alt="">
+        </div>
+
+        <form id="miFormulario2" style="width: 500px;">
+            <label for="qop">
+                <p>Gasto presente:<br></p>
+            </label>
+            <input type="text" id="qop" name="qop" required class="field"><br>
+
+            <label for="prp"><br>
+                <p>Presion media del yacimiento:<br></p>
+            </label>
+            <input type="text" id="prp" name="prp" required class="field"><br>
+
+            <label for="pwf"><br>
+                <p>Presion del fondo fluyendo:<br></p>
+            </label>
+            <input type="text" id="pwf" name="pwf" required class="field"><br>
+
+            <label for="prf"><br>
+                <p>Presion media del yacimiento futura:<br></p>
+            </label>
+            <input type="text" id="prf" name="prf" required class="field"><br>
+
+            <label for="kroP"><br>
+                <p>Kro presente:<br></p>
+            </label>
+            <input type="text" id="kroP" name="kroP" required class="field"><br>
+
+            <label for="krof"><br> <br> KRO futura:</p></label>
+            <input type="text" id="krof" name="krof" required class="field"><br>
+
+            <label for="VizP">
+                <p>Viscosidad Presente:<br></p>
+            </label>
+            <input type="text" id="VizP" name="VizP" required class="field"><br>
+
+            <label for="VizF"><br>
+                <p>Viscosidad futura:<br></p>
+            </label>
+            <input type="text" id="VizF" name="VizF" required class="field"><br>
+
+            <label for="BoP"><br>
+                <p>Bo presente:<br></p>
+            </label>
+            <input type="text" id="BoP" name="BoP" required class="field"><br>
+
+            <label for="BoF"><br>
+                <p>Bo futura:<br></p>
+            </label>
+            <input type="text" id="BoF" name="BoF" required class="field"><br>
+
+            <label for="r"><br>
+                <p>Numero de puntos (grafica)<br></p>
+            </label>
+            <input type="text" id="r" name="r" required class="field"><br>
+        </form>
+
+        <div style="margin-top: 10px;">
+            <button type="button" class="btn  btn-success" id="calcular">Calcular</button>
+        </div>
 
 
+        <canvas id="myChart"></canvas>
+        <script src="{{ url_for('static', path='js/Standing.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="{{ url_for('static', path='js/jquery.min.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+            </script>
 
-<script src=".{{ url_for('static', path='js/main.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+            </script>
 </body>
-
 
 </html>
