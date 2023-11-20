@@ -1,25 +1,27 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial;
+
    
 }
 
 #contenedor_principal{
     
-    width: 60%;
-    height: 60%;
+width: 60%;
+height: 60%;
  display:flex;  
- backdrop-filter: blur(0.4rem); 
-padding: 5%;
 margin: 0 auto;
 position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%,-50%);
 border: 1px solid white;
--webkit-backdrop-filter: blur(00.4rem);
-
+background-image: url(../img/plataforma-petrolera-oceano-puesta-sol-detras-ella-min.jpg);
+background-position-x: center;
+background-position-y: center;
+background-size: 200%;
+background-repeat: no-repeat;
 }
 
 
@@ -32,45 +34,65 @@ border: 1px solid white;
     border-bottom: 1px solid white;
     top: 50%;
     justify-content: center ;
+    width: 50%;
+    font-size: clamp (2em, 5vw, 5em);
 
 }
 #menu1{
-    top: 50%;
-    left: 50%;
+
+    margin-left: 5px;
     color: aliceblue;
-    display: grid;
-    align-items: center ;
-    width: auto;
-    height: 90%;
- 
-    
-    
+    display: flex;
+    align-items: center;
+   
+    top: 50%;
+    justify-content: center ;
+    width: 50%;
 }
+.title{
+padding: auto;
+color: white;
+font-size: calc(1em,5vw,10em);
+margin-left: 20%;
+margin-right: 0;
+
+}
+
 .li{
-    display:flex;
+   display:flex;
     align-items: center;
     list-style: none;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-top: 1px solid white;
+    margin-top: auto;
+    margin-bottom: auto;
+ border-bottom: 2px solid white;
+    font-size: calc(1em,5vw,10em);
+text-align: center;
+margin-top: 30%;
+margin-bottom: 10%;
     
 }
 li a{
     margin-top: 5px;
     margin-bottom: 5px;
     width: 2%;
-    height: 2%;
+    height:auto;
+    text-decoration: none;
+    color: white;
+    justify-content: center;
+
    }
 body{
     width: 500px;
-    background-image: url(../img/plataforma-petrolera-oceano-puesta-sol-detras-ella-min.jpg) ;
+   background-image: url(../img/Desenfoque.png);
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 20em;
-    margin-bottom: 2%;
+    background-position-x: center;
+    background-position-y: center;
+
  
 }
 
@@ -88,23 +110,27 @@ header{
     list-style: none;
     display: flex;
     gap: 1rem;
-}
-.nav-list li a{
     text-decoration: none;
-    color:white;
 }
+
 
 #contenedor_principal2{
 display:flex;  
- backdrop-filter: blur(0.4rem); 
 padding: 5%;
 margin: 0 auto;
 border: 1px solid white;
--webkit-backdrop-filter: blur(00.4rem);
-margin-left: 2%;
-margin-right: 2%;
-position: relative;
+margin-left: 3%;
+margin-right: 3%;
+background-image: url(../img/plataforma-petrolera-oceano-puesta-sol-detras-ella-min.jpg);
+background-position-x: center;
+background-position-y: center;
+background-size: 120%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+
 }
+
 
 
 .abrir-menu,
@@ -120,15 +146,15 @@ position: relative;
         border-radius: 10px;
        
     }
-    
-    
-    .nav {
-        display:none ;
-       
-    }
     .nav{
         opacity: 0;
         visibility: hidden;
+    }
+     
+       
+    
+    .nav{
+        
         display: flex;
         flex-direction: column;
         align-items: end;
@@ -153,3 +179,76 @@ position: relative;
 
     }
 }
+#contenedor_principal2 {
+    display: flex;
+    flex-direction: column;
+ 
+align-items: center;  
+}
+
+form{
+    margin: 0 auto;
+    width: 300px;
+    background-color: white;
+    opacity: 0.8;
+    padding: 2%;
+ border-radius: 3px;
+}
+
+.field{
+    padding: 2%;
+    width: 90%;
+}
+
+
+button{
+    margin: 0 auto;
+    width: 300px;
+    border-radius: 3px;
+    padding: 2%;
+  
+}
+
+
+    #miFormulario2 {
+        column-count: 2;
+        column-gap: 2%; 
+        width:  90%;;
+        margin: auto; 
+    }
+
+    
+    label {
+       /* display: block;*/
+        margin-bottom: 5px;
+    }
+
+    .field {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 1px;
+    }
+
+
+.parrafos{
+    background-color: white;
+    opacity: 0.8;
+padding: 2%;
+margin-bottom: 5%;
+}
+
+#myChart{
+z-index: 1;
+}
+
+
+canvas {
+    max-width: 80%;
+    margin: 20px;
+    background-color: white;
+    opacity: 0.8;
+  }
+  
+
+
+  

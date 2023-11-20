@@ -12,16 +12,11 @@ from .productividad.Eickmeier import Eickmeier
 
 # Importar modelos
 from models import *
+from models import VogelResponseModel
 
 templates = Jinja2Templates(directory="templates/Productividad")
 
 productividad = APIRouter()
-
-# NOTE - El metodo quedara para realizarce en futuro
-# @productividad.get("/productividad/", tags=["Productividad"])
-# async def view(request: Request):
-#     return templates.TemplateResponse("/Vogel_generalizado.html", {"request": request})
-
 
 # NOTE - Voguel Methods
 @productividad.get("/productividad/vogel", tags=["Productividad"])
@@ -32,12 +27,13 @@ async def indexVogel(request: Request):
 @productividad.post("/productividad/vogel", tags=["Productividad"])
 async def vogel(data: VogelModel):
     metodo = Vogel()
+    # response = VogelResponseModel
     if data.pwf >= data.pb:
         caseA = metodo.VogelCaseA(data.qo, data.pr, data.pwf, data.pb, data.r)
-        return json.dumps(caseA)
+        return VogelResponseModel(**caseA)
     else:
         caseB = metodo.VogelCaseB(data.qo, data.pr, data.pwf, data.pb, data.r)
-        return json.dumps(caseB)
+        return VogelResponseModel(**caseB)
 
 
 # NOTE - BackPressure Methods

@@ -4,17 +4,17 @@ class Standing:
 
     def defaultMethod(self, qoP, prP, pwf, prF, kroP, kroF, vizP, vizF, BoP, BoF, r):
         # Paso 1 calculo de qoMax Presente
-        qoMaxP = qoP / (1 - 0.2 * (pwf / prP) - 0.8 * pow((pwf / prP), 2))
+        qoMaxP = round(qoP / (1 - 0.2 * (pwf / prP) - 0.8 * pow((pwf / prP), 2)),3)
         # Gasto Max Presnete
 
         # Paso 2 Usar las propiedades de los fluidos, para calcular IPR presente y futuro
-        JF = (kroF) / (vizF * BoF)  # viz es la vizcosidad
+        JF = round((kroF) / (vizF * BoF),3)  # viz es la vizcosidad
         # # IPR Futuro
 
-        JP = (kroP) / (vizP * BoP)  # IPR Presente
+        JP = round((kroP) / (vizP * BoP),3)  # IPR Presente
 
         # Paso 3 Calcular 𝑞𝑜(max)𝐹
-        qoMaxF = qoMaxP * ((prF * JF) / (prP * JP))
+        qoMaxF = round(qoMaxP * ((prF * JF) / (prP * JP)),3)
         # # Gasto Max Futuro
 
         # Paso 4 Preparar elementos para la grafica
@@ -37,11 +37,13 @@ class Standing:
         )
         # # Lista de Gastos Futuras
 
-        return {"JF": JF, "JP": JP, 
-                "qoMaxP": qoMaxP, 
-                "qoMaxF": qoMaxF, 
-                "lpwfP": lpwfP,
-                "lpwfF": lpwfF,
-                "lqoP": lqoP,
-                "lqoF" : lqoF
-                }
+        return {
+            "JF": JF,
+            "JP": JP,
+            "qoMaxP": qoMaxP,
+            "qoMaxF": qoMaxF,
+            "lpwfP": lpwfP,
+            "lpwfF": lpwfF,
+            "lqoP": lqoP,
+            "lqoF": lqoF,
+        }

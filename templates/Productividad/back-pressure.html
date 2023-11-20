@@ -1,34 +1,140 @@
+<!DOCTYPE html>
+<html>
 
-<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/main.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Productividad de pozos</title>
+</head>
+
+<body class="body2">
     <header>
         <img class="logo" src="{{ url_for('static', path='img/fiunam.png') }}" alt="logo">
-        <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+        <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i> </button>
         <nav class="nav" id="nav">
-            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-circle"></i></button>
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-lg"></i></button>
             <ul class="nav-list">
-                <li><a href="../index.html">Inicio</a</li>
-                <li><a href="../Biografia/Biografia.html">Biografia</a></li>
-                <li><a href="../vogel/Vogel_generalizado.html">Vogel generalizado</a></li>
-                <li><a href="../Back Pressure/back-pressure.html">Back Pressure</a></li>
-                <li><a href="../Eickmeier/Eickmeier.html">Eickmeier</a></li>
-                <li><a href="../Standing/standing.html">Standing</a></li>
-                <li><a href="../Agradecimientos/agradecimientos.html">Agradecimientos</a></li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/biografia">Biografia</a></li>
+                <li><a href="vogel">Vogel generalizado</a></li>
+                <li><a href="back-pressure">Back Pressure</a></li>
+                <li><a href="eickmeier">Eickmeier</a></li>
+                <li><a href="standing">Standing</a></li>
+                <li><a href="/agradecimientos">Agradecimientos</a></li>
             </ul>
         </nav>
-
     </header>
-    
-        
 
     <div id="contenedor_principal2">
-      
-    <p>hola khe hace</p>
+        <div class="parrafos">
+            <h1> Back pressure</h1>
+            <p style="color: black">
 
-   </div>
+                <br> 1) Antecedentes: El back pressure (o presión de retorno) se refiere a la resistencia o presión
+                ejercida en el flujo de un fluido, en este caso, en la producción de gas en un pozo. Esta presión es
+                generada por diferentes factores, como restricciones en el sistema de producción, equipos de control de
+                flujo, reguladores de presión, entre otros.<br><br>
+                En la producción de pozos de gas, el back pressure se utiliza para controlar el flujo de gas y mantener
+                una presión adecuada en el yacimiento. Esto se logra ajustando diferentes parámetros, como el índice de
+                turbulencia (n) y la constante de estabilización del comportamiento de flujo (C), que determinan la
+                relación entre la presión y la tasa de flujo de gas.<br><br>
+                Gráficamente, el back pressure se representa en un gráfico de presión versus tasa de flujo. En este
+                gráfico, la presión se representa en el eje vertical y la tasa de flujo de gas en el eje horizontal. La
+                curva resultante muestra la relación entre la presión y la tasa de flujo, y cómo varía con diferentes
+                niveles de back pressure.<br><br>
+                • Objetivos: El objetivo del método Backpressure es controlar y optimizar el flujo de gas en los pozos
+                de gas.<br><br>
+                • Busca estabilizar el comportamiento de flujo y maximizar la producción sostenible.<br><br>
+                • Se enfoca en mantener una presión de fondo fluyendo adecuada en el yacimiento.<br><br>
+                • Optimiza la eficiencia del proceso de producción al minimizar las fluctuaciones de presión y maximizar
+                la recuperación del gas.<br><br>
+                En resumen, el objetivo es maximizar la producción, mantener la presión adecuada y optimizar la
+                eficiencia del proceso de producción de gas.<br><br>
+                • Metodología: <br><br>
+                a) Realiza pruebas de presión para obtener datos de gasto (qg) y diferencia de presión al cuadrado
+                ((pR^2 - pwf^2)).<br><br>
+                b) Grafica el gasto de gas (qg) versus la diferencia de presión al cuadrado en una escala
+                logarítmica-logarítmica.<br><br>
+                c) Selecciona cuatro puntos estables en la línea recta resultante.<br><br>
+                d) Calcula la pendiente de la línea recta, que representa el valor de n (índice de turbulencia).<br><br>
+                e) Calcula el valor de C utilizando la ecuación: C = qg / ((pR^2 - pwf^2) * n).<br><br>
+                f) Calcula el Potencial Absoluto de Flujo Abierto de un pozo (AOFP) utilizando el valor máximo del gasto
+                de gas (qgmax), que se obtiene multiplicando el valor de C por ((pR^2 - patm^2) * n), donde patm es la
+                presión atmosférica.<br><br>
+                Estos pasos te permitirán determinar los valores de C y n para analizar el comportamiento de flujo en
+                pozos de gas. Además, el valor de n puede variar entre 0.5 (flujo turbulento) y 1 (flujo laminar),
+                dependiendo de las características del yacimiento.<br><br>
+                • Modelo matemático:<br><br>
+                El modelo matemático permite predecir cómo cambiará la presión y la tasa de flujo de gas en función de
+                diferentes ajustes en el back pressure. Esto ayuda a los ingenieros y operadores a tomar decisiones
+                informadas sobre cómo controlar y optimizar la producción de gas en los pozos.<br><br>
+            </p>
+
+            <img src="{{ url_for('static', path='img/back-1.jpeg') }}" alt="">
+            <p><br></p>
+            <img src="{{ url_for('static', path='img/back-2.jpeg') }}" alt="">
+
+            <p><br>En general, cuando se aplica back pressure en un pozo de gas, se observa que a medida que aumenta la
+                presión, la tasa de flujo de gas disminuye. Esto se debe a la resistencia o contrapresión que se ejerce
+                sobre el flujo. La forma de la curva puede variar dependiendo de las características del yacimiento y de
+                los parámetros de ajuste utilizados.<br>
+            </p>
+            <b>
+                <p>Back Pressure: Controla el flujo, maximiza la producción </p>
+            </b>
+        </div>
+
+        <form id="miFormulario" style="width: 500px;">
+            <label for="pws">
+                <p>Pws o presión media del yacimiento<br></p>
+            </label>
+            <input type="text" id="pws" name="pws" pattern="^[-+]?\d+(\.\d+)?$" required class="field"><br>
+
+            <label for="pwf1"><br>
+                <p>Presion de fondo fluyente (punto 1)<br></p>
+            </label>
+            <input type="text" id="pwf1" name="pwf1" pattern="^[-+]?\d+(\.\d+)?$" required class="field"><br>
+
+            <label for="pwf2"><br>
+                <p>Presion de fondo fluyente (punto 2)<br></p>
+            </label>
+            <input type="text" id="pwf2" name="pwf2" pattern="^[-+]?\d+(\.\d+)?$" required class="field"><br>
 
 
+            <label for="qg1"><br>
+                <p>Gasto (punto 1)<br></p>
+            </label>
+            <input type="text" id="qg1" name="qg1" pattern="^[-+]?\d+(\.\d+)?$" required class="field"><br>
 
+            <label for="qg2"><br>
+                <p>Gasto (punto 2)<br></p>
+            </label>
+            <input type="text" id="qg2" name="qg2" pattern="^[-+]?\d+(\.\d+)?$" required class="field"><br>
 
+            <label for="r"><br>
+                <p>Numero de puntos (grafica)<br></p>
+            </label>
+            <input type="text" id="r" name="r" pattern="^[-+]?\d+$" required class="field"><br>
+        </form>
+        <div style="margin-top: 10px;">
+            <button type="button" class="btn  btn-success" id="calcular">Calcular</button>    
+        </div>
+        
 
-<script src="{{ url_for('static', path='js/main.js') }}"></script>
+        <canvas id="myChart"></canvas>
+        <script src="{{ url_for('static', path='js/BackPressure.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="{{ url_for('static', path='js/jquery.min.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+            </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+            </script>
 </body>
+
+</html>

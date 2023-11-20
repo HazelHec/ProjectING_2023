@@ -3,56 +3,31 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="{{ url_for('static', path='css/indexProductividad.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', path='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/main.css') }}">
 
-  <title>Engi</title> <!-- Productividad de pozos -->
+  <title>Productividad de pozos</title>
 </head>
 
 <body>
-  <div class="imagen_fondo">
-
-
+  <div class="imagen_fondo" id="imagen_fondo">
     <div id="contenedor_principal">
-
       <div id="Texto">
-        <H1>Curvas de comportamiento de afluencia</H1>
+        <H1 class="title">Curvas de comportamiento de afluencia</H1>
       </div>
       <div id="menu1">
-        <nav class="flex-column">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <a class="nav-link active" href="Biografia/Biografia.html">Biografia</a>
-            </li>
-            <li class="list-group-item" id="method">
-              <a class="nav-link active" href="productividad/vogel">Vogel generalizado</a>
-            </li>
-            <li class="list-group-item" id="method">
-              <a class="nav-link active" href="productividad/back-pressure">Back Pressure</a>
-            </li>
-            <li class="list-group-item" id="method">
-              <a class="nav-link active" href="productividad/eickmeir">Eickmeier</a>
-            </li>
-            <li class="list-group-item" id="method">
-              <a class="nav-link active" href="productividad/stading">Standing</a>
-            </li>
-            <li class="list-group-item">
-              <a class="nav-link active" href="Agradecimientos/agradecimientos.html">Agradecimientos</a>
-            </li>
+        <nav>
+          <ul>
+            <li class="li"><a href="/biografia">Biografia</a></li>
+            <li class="li"><a href="productividad/vogel">Vogel generalizado</a></li>
+            <li class="li"><a href="productividad/back-pressure">Back Pressure</a></li>
+            <li class="li"><a href="productividad/eickmeier">Eickmeier</a></li>
+            <li class="li"><a href="productividad/standing">Standing</a></li>
+            <li class="li"><a href="/agradecimientos">Agradecimientos</a></li>
           </ul>
         </nav>
       </div>
-
     </div>
-
-
   </div>
-
 </body>
-<footer>
-  <script src="{{ url_for('static', path='js/productividad.js') }}"></script>
-  <script src="{{ url_for('static', path='js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ url_for('static', path='js/jquery.min.js') }}"></script>
-</footer>
 
 </html>
