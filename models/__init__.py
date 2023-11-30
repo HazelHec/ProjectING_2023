@@ -4,6 +4,9 @@ from models.Productividad import (
     EickmeierModel,
     StandingModel,
     VogelResponseModel,
+    BackPressureResponseModel,
+    EickmeierResponseModel,
+    StandingResponseModel
 )
 
 __all__ = [

@@ -1,8 +1,6 @@
 from fastapi import APIRouter
 from fastapi import Request
 from fastapi.templating import Jinja2Templates
-import json
-import pprint
 
 # Importar metodos numericos
 from .productividad.Vogel import Vogel
@@ -12,11 +10,17 @@ from .productividad.Eickmeier import Eickmeier
 
 # Importar modelos
 from models import *
-from models import VogelResponseModel
+from models import (
+    VogelResponseModel,
+    BackPressureResponseModel,
+    EickmeierResponseModel,
+    StandingResponseModel,
+)
 
 templates = Jinja2Templates(directory="templates/Productividad")
 
 productividad = APIRouter()
+
 
 # NOTE - Voguel Methods
 @productividad.get("/productividad/vogel", tags=["Productividad"])
@@ -27,7 +31,6 @@ async def indexVogel(request: Request):
 @productividad.post("/productividad/vogel", tags=["Productividad"])
 async def vogel(data: VogelModel):
     metodo = Vogel()
-    # response = VogelResponseModel
     if data.pwf >= data.pb:
         caseA = metodo.VogelCaseA(data.qo, data.pr, data.pwf, data.pb, data.r)
         return VogelResponseModel(**caseA)
@@ -44,8 +47,11 @@ async def indexBackPressure(request: Request):
 
 @productividad.post("/productividad/back-pressure", tags=["Productividad"])
 async def backPresure(data: BackPressureModel):
-    response = BackPressure()
-    return response.defaultMethod(data.pr, data.pwf1, data.pwf2, data.qg1, data.qg2, data.r)
+    metodo = BackPressure()
+    response = metodo.defaultMethod(
+        data.pr, data.pwf1, data.pwf2, data.qg1, data.qg2, data.r
+    )
+    return BackPressureResponseModel(**response)
 
 
 # NOTE - Eickmeir Methods
@@ -56,8 +62,9 @@ async def indexEickmeier(request: Request):
 
 @productividad.post("/productividad/eickmeier", tags=["Productividad"])
 async def eickmeier(data: EickmeierModel):
-    response = Eickmeier()
-    return response.defaultMethod(data.qo,data.prP,data.pwf,data.prF)
+    metodo = Eickmeier()
+    response = metodo.defaultMethod(data.qo, data.prP, data.pwf, data.prF)
+    return EickmeierResponseModel(**response)
 
 
 # NOTE - Stading Methods
@@ -68,5 +75,6 @@ async def indexStanding(request: Request):
 
 @productividad.post("/productividad/standing", tags=["Productividad"])
 async def standing(data: StandingModel):
-    response = Standing()
-    return response.defaultMethod(data.qoP,data.prP,data.pwf,data.prF,data.kroP,data.kroF,data.vizP,data.vizF,data.BoP,data.BoF ,data.r)
+    metodo = Standing()
+    response = metodo.standing(data.pwf, data.pr, data.qo, data.ef, data.n)
+    return StandingResponseModel(**response)

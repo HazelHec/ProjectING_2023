@@ -54,30 +54,18 @@ class EickmeierResponseModel(BaseModel):
 
 
 class StandingModel(BaseModel):
-    # Calculos de qoF y qomaxF
-
-    qoP: float  # El gasto presente
-    prP: float  # Presion media del yacimiento Presente
-    pwf: float  # Presion de fondo fluyente
-    prF: float  # Presion media del yacimiento Futura
-
-    # NOTE - El primer valor de la lista es el presente y el segundo el futuro
-    # Tomar esto en cuenta en sus ejercicios de prueba
-    kroP: float  # kro presente
-    kroF: float  # kro furturo
-    vizP: float  # Vizcosidad presente 
-    vizF: float  # Vizcosidad  futura
-    BoP: float  # Bo presente
-    BoF: float  # Bo  futuro
-    r: int  # Es el numero de iteraciones para el grafico
+    # Calculos de qo EF
+    pwf: float  # Presion de fondo fluyente psia
+    pr: float  # Presion media del yacimiento psia
+    qo: float  # bpd gasto de aceite
+    ef: float  # Presion de Burbuja psia
+    n: int  # Es el numero de iteraciones para la grafica
 
 
-class StandinResponsegModel(BaseModel):
-    JF: float  # Ipr futura
-    JP: float  # Ipr presente
-    qoMaxP: float  # gasto maximo presente
-    qoMaxF: float  # gasto maximo futuro
-    lpwfP: List[float] #valores pwf presentes
-    lpwfF: List[float] #valores pwf futuros
-    lqoP: List[float] #valores qo presentes
-    lqoF: List[float] #valores qo futuros
+class StandingResponseModel(BaseModel):
+    pwfs: float  # presion de fondo fluyente con dano
+    qoMaxEf1: float  # gasto maximo a EF = 1
+    qoMaxEfD: float  # gasto maximo a EF = del usuario
+    lpwf: List[float] #valores de pwf 
+    lqoEf: List[float] #valores qo para eficiencia dada
+    lqoEf1: List[float] #valores qo para eficiencia = 1
