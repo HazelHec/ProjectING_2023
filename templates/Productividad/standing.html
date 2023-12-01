@@ -31,125 +31,208 @@
     </header>
 
     <div id="contenedor_principal2">
-        <div class="parrafos">
-            <h1> Método de Standing (Muskat+Vogel)</h1>
-            <p style="color: black">
-
-                <br>
-                Como se mencionó anteriormente, Vogel no considera los daños de formación (𝑆); posteriormente, Standing
-                (1970), toma el problema que Vogel dejó y demuestra una solución para este.
-                <br> <br>
-
-                <br>Para esto, parte de la premisa que la presión de fondo fluyente se verá afectada debido a la caída
-                de presión ∆𝑃𝑠 ; es por esto que él denominó 𝑃𝑤𝑓 ′ a la presión de fondo fluyente ideal y 𝑃𝑤𝑓a
-                la presión de fondo fluyente real.
-
-                <br>La relación entre el "Drawdown" que es la diferencia de presiones (∆𝑃 = 𝑃𝑅 ̅̅̅ − 𝑃𝑤𝑓) real e
-                ideal las denominó eficiencia de flujo, representada en la ecuación
-
-
-                <br> <br>El método requiere de datos de permeabilidad relativa del aceite, viscosidad y factor de
-                volumen en función de la presión del yacimiento.<br>
-                La saturación del aceite como función de la presión promedio del yacimiento, puede determinarse
-                utilizando balance de materia, por lo tanto, la permeabilidad relativa del aceite puede ser determinada
-                si los datos de permeabilidad se conocen. <br><br>
-                Las propiedades de los fluidos (viscosidad y factor de volumen) pueden obtenerse de análisis de
-                laboratorio o correlaciones empíricas.
-            </p>
-            <img src="{{ url_for('static', path='img/std1.jpeg') }}" alt="">
-            <p>
-                <br> <br>
-            </p>
-            <img src="{{ url_for('static', path='img/std2.jpeg') }}" alt="">
-
-            <p>
-                <br>Que es la ecuación del método de Standing. Tiempo después de su demostración, se determinó que esta
-                ecuación no es viable para valores de EF mayores a 1. Para que sea utilizable, esta ecuación debe
-                cumplir las siguientes dos condiciones
-                <br>
-            </p>
-            <img src="{{ url_for('static', path='img/std3.jpeg') }}" alt="">
-            <p>Se mencionó anteriormente que estas dos condiciones se cumplen siempre para una EF menor o igual que uno.
-                <br>
-
-                Si no se cumplen estas condiciones, entonces solo se puede determinar el 𝑞𝑀á𝑥 para dicha eficiencia
-                mediante la correlación de Standing, enunciada en la ecuación (2.49) <br>
-            </p>
-
-            <img src="{{ url_for('static', path='img/std4.jpeg') }}" alt="">
+        <div class="parrafos" style="opacity: 100%; margin-bottom: 0;">
+            <h1 style="text-align: center;"> Método de Standing </h1>
+            <table style="width: 100%;" cellpading="0" cellspacing="0">
+                <tr>
+                    <td
+                        style="width: 50%; vertical-align: top; text-align: justify; padding-right: 20px; border-right: solid 2px black;">
+                        <p>
+                            Como se mencionó anteriormente, Vogel no considera los daños de formación (𝑆);
+                            posteriormente, Standing
+                            (1970), toma el problema que Vogel dejó y demuestra una solución para este.
+                        </p>
+                        <p>
+                            Para esto, parte de la premisa que la presión de fondo fluyente se verá afectada debido a
+                            la caída
+                            de presión ∆𝑃𝑠 ; es por esto que él denominó 𝑃𝑤𝑓 ′ a la presión de fondo fluyente ideal
+                            y 𝑃𝑤𝑓a
+                            la presión de fondo fluyente real.
+                        </p>
+                        <p>
+                            La relación entre el "Drawdown" que es la diferencia de presiones (∆𝑃 = 𝑃𝑅 ̅̅̅ − 𝑃𝑤𝑓)
+                            real
+                            e
+                            ideal las denominó eficiencia de flujo, representada en la ecuación.
+                        </p>
+                        <p>
+                            El método requiere de datos de permeabilidad relativa del aceite, viscosidad y factor de
+                            volumen en función de la presión del yacimiento.
+                        </p>
+                        <p>
+                            La saturación del aceite como función de la presión promedio del yacimiento, puede
+                            determinarse
+                            utilizando balance de materia, por lo tanto, la permeabilidad relativa del aceite puede ser
+                            determinada
+                            si los datos de permeabilidad se conocen.
+                        </p>
+                        <p>
+                            Las propiedades de los fluidos (viscosidad y factor de volumen) pueden obtenerse de análisis
+                            de
+                            laboratorio o correlaciones empíricas.
+                        </p>
+                        <p style="margin-top: 15px;">
+                            Que es la ecuación del método de Standing. Tiempo después de su demostración, se determinó
+                            que esta
+                            ecuación no es viable para valores de EF mayores a 1. Para que sea utilizable, esta ecuación
+                            debe
+                            cumplir las siguientes dos condiciones
+                        </p>
+                        <p>
+                            Se mencionó anteriormente que estas dos condiciones se cumplen siempre para una EF menor o
+                            igual que uno. <br>
+                            Si no se cumplen estas condiciones, entonces solo se puede determinar el 𝑞𝑀á𝑥 para dicha
+                            eficiencia
+                            mediante la correlación de Standing, enunciada en la ecuación (2.49)
+                        </p>
+                    </td>
+                    <td style="width: 50%; vertical-align: top; padding-left: 20px;">
+                        <img src="{{ url_for('static', path='img/std1.jpeg') }}" alt="l1" width="50%">
+                        <img src="{{ url_for('static', path='img/std2.jpeg') }}" alt="l2" width="80%">
+                        <img src="{{ url_for('static', path='img/std3.jpeg') }}" alt="l3" width="60%">
+                        <img src="{{ url_for('static', path='img/std4.jpeg') }}" alt="l3" width="50%">
+                    </td>
+                </tr>
+            </table>
         </div>
 
-        <form id="miFormulario2" style="width: 500px;">
-            <label for="qop">
-                <p>Gasto presente:<br></p>
-            </label>
-            <input type="text" id="qop" name="qop" required class="field"><br>
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Columna del formulario -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Formulario</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="pwf">
+                                        Presion de fondo fluyente
+                                    </label>
+                                    <input type="text" id="pwf" name="pwf" pattern="^[-+]?\d+(\.\d+)?$" required
+                                        class="field">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="pr">
+                                        Pws o presión media del yacimiento
+                                    </label>
+                                    <input type="text" id="pr" name="pr" pattern="^[-+]?\d+(\.\d+)?$" required
+                                        class="field">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="qo">
+                                        Gasto de aceite (qo)
+                                    </label>
+                                    <input type="text" id="qo" name="qo" pattern="^[-+]?\d+(\.\d+)?$" required
+                                        class="field">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="ef">
+                                        Eficiencia
+                                    </label>
+                                    <input type="text" id="ef" name="ef" pattern="^[-+]?\d+(\.\d+)?$" required
+                                        class="field">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="n">
+                                        Numero de puntos (grafica)
+                                    </label>
+                                    <input type="text" id="n" name="n" pattern="^[-+]?\d+$" required class="field"
+                                        maxlength="2">
+                                </div>
+                            </form>
+                            <div class="mb-3" style="text-align: center;">
+                                <button type="button" class="btn  btn-success" id="calcular">Calcular</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <label for="prp"><br>
-                <p>Presion media del yacimiento:<br></p>
-            </label>
-            <input type="text" id="prp" name="prp" required class="field"><br>
 
-            <label for="pwf"><br>
-                <p>Presion del fondo fluyendo:<br></p>
-            </label>
-            <input type="text" id="pwf" name="pwf" required class="field"><br>
+                <!-- Columna de gráficos -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body d-flex flex-wrap justify-content-center align-items-center">
+                            <div style="width: 300px; height: 250px; margin: 10px;" class="text-center">
+                                <h6 class="card-subtitle mb-2 text-muted">Gráfico con daño</h6>
+                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#modalGrafico1">
+                                    <i class="fas fa-plus"></i> Abrir
+                                </button>
+                                <canvas id="myChart"></canvas>
+                            </div>
 
-            <label for="prf"><br>
-                <p>Presion media del yacimiento futura:<br></p>
-            </label>
-            <input type="text" id="prf" name="prf" required class="field"><br>
-
-            <label for="kroP"><br>
-                <p>Kro presente:<br></p>
-            </label>
-            <input type="text" id="kroP" name="kroP" required class="field"><br>
-
-            <label for="krof"><br> <br> KRO futura:</p></label>
-            <input type="text" id="krof" name="krof" required class="field"><br>
-
-            <label for="VizP">
-                <p>Viscosidad Presente:<br></p>
-            </label>
-            <input type="text" id="VizP" name="VizP" required class="field"><br>
-
-            <label for="VizF"><br>
-                <p>Viscosidad futura:<br></p>
-            </label>
-            <input type="text" id="VizF" name="VizF" required class="field"><br>
-
-            <label for="BoP"><br>
-                <p>Bo presente:<br></p>
-            </label>
-            <input type="text" id="BoP" name="BoP" required class="field"><br>
-
-            <label for="BoF"><br>
-                <p>Bo futura:<br></p>
-            </label>
-            <input type="text" id="BoF" name="BoF" required class="field"><br>
-
-            <label for="r"><br>
-                <p>Numero de puntos (grafica)<br></p>
-            </label>
-            <input type="text" id="r" name="r" required class="field"><br>
-        </form>
-
-        <div style="margin-top: 10px;">
-            <button type="button" class="btn  btn-success" id="calcular">Calcular</button>
+                            <div style="width: 300px; height: 250px; margin: 10px;" class="text-center">
+                                <h6 class="card-subtitle mb-2 text-muted">Gráfico Eficiencia de flujo 1</h6>
+                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#modalGrafico2">
+                                    <i class="fas fa-plus"></i> Abrir
+                                </button>
+                                <canvas id="myChart2"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Resultados del metodo</h5>
+                            <div id="results"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <!-- Modales para los gráficos -->
+        <div class="modal fade" id="modalGrafico1" tabindex="-1" aria-labelledby="modalGrafico1Label"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalGrafico1Label">IPR Futura</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <canvas id="modalChart1"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <canvas id="myChart"></canvas>
-        <script src="{{ url_for('static', path='js/Standing.js') }}"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="{{ url_for('static', path='js/jquery.min.js') }}"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-            </script>
+        <div class="modal fade" id="modalGrafico2" tabindex="-1" aria-labelledby="modalGrafico2Label"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalGrafico2Label">IPR Presente</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <canvas id="modalChart2"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script src="{{ url_for('static', path='js/Standing.js') }}"></script>
+            <!--<script src="{{ url_for('static', path='js/graficasVogel.js') }}"></script> -->
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+                integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+                crossorigin="anonymous">
+                </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-            </script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+                integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+                crossorigin="anonymous">
+                </script>
+            <script src="{{ url_for('static', path='js/jquery.min.js') }}"></script>
+        </footer>
+
 </body>
 
 </html>
