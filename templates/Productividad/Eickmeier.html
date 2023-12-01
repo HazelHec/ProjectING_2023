@@ -29,104 +29,226 @@
   </header>
 
   <div id="contenedor_principal2">
-    <div class="parrafos">
-      <h1> Método de Eickmeier (Fetkovich+Vogel) ip futura</h1>
-      <p style="color: black">
-        1) Antecedentes: El método de Fetkovich es una técnica ampliamente utilizada en la industria del
-        petróleo y gas para predecir el comportamiento de producción de un pozo a lo largo del tiempo. Este
-        método se basa en el análisis de la presión y la tasa de flujo de fluido en el yacimiento.<br> <br>
-        La producción de un pozo está influenciada por varios factores, como la permeabilidad del yacimiento, la
-        porosidad, el tipo de fluido presente y la geometría del yacimiento. A medida que se extrae el fluido
-        del yacimiento, la presión disminuye, lo que afecta la tasa de flujo de producción. El método de
-        Eickmeier utiliza modelos matemáticos y análisis estadísticos para predecir cómo cambiará la tasa de
-        producción a medida que varía la presión.
-
-      </p>
-      <p>
-        Objetivos: El objetivo del método de Eickmeier es proporcionar una herramienta eficaz para predecir
-        el comportamiento de producción futura de un pozo en la industria del petróleo y gas. Al combinar los
-        métodos de Fetkovich y Vogel, este enfoque busca brindar a los ingenieros de reservorios una comprensión
-        clara del potencial de producción de un pozo y permitirles planificar las operaciones de producción de
-        manera eficiente.
-      </p>
-      <p>
-        2) El objetivo final del método de Eickmeier es mejorar la eficiencia de la producción y optimizar la
-        recuperación de hidrocarburos del yacimiento. Al proporcionar a los ingenieros de reservorios una
-        comprensión clara del potencial de producción de un pozo, les permite planificar las operaciones de
-        producción de manera eficiente y tomar decisiones informadas sobre estrategias de producción y
-        programación de operaciones. Esto implica ajustar parámetros como la presión de fondo de pozo, la
-        inyección de fluidos y la optimización de la producción para maximizar la recuperación de petróleo y gas
-        del yacimiento.
-      </p>
-       <p>
-        3) La metodología del método de Eickmeier, que combina los métodos de Fetkovich y Vogel, se puede
-        resumir de la siguiente manera: <br>
-        • Realizar una prueba de producción: Se lleva a cabo una prueba de producción en el pozo para recopilar
-        datos necesarios como la tasa de producción de petróleo (qo), la presión de fondo fluyente (pwf) y la
-        presión de reserva (pr).
-       </p>
-        • Utilizar la ecuación de Vogel: Con los datos obtenidos de la prueba de producción, se utiliza la
-        ecuación de Vogel para determinar la tasa de producción máxima de petróleo (qo(max)P). Esta ecuación
-        tiene en cuenta la relación entre la tasa de producción y la presión de fondo fluyente.<br><br>
-        • Calcular qo(max)F: Utilizando la tasa de producción máxima de petróleo obtenida en el paso anterior
-        (qo(max)P), se calcula la tasa de producción máxima ajustada (qo(max)F) utilizando la siguiente
-        fórmula:<br><br>  
-        qo(max)F = qo(max)P * (pr F / pr P)^3 Donde pr F es la presión de reserva en el futuro y pr P es la
-        presión de reserva actual.<br><br>
-        • Calcular qo F: Finalmente, se calcula la tasa de producción ajustada en el futuro (qo F) utilizando la
-        siguiente fórmula: qo F = qo(max)F * (1 - 0.2 * (pwf / pr F) - 0.8 * (pwf / pr F)^2) Donde pwf es la
-        presión de fondo fluyente en el futuro.<br><br>
-        Estos pasos permiten ajustar las tasas de producción de petróleo (qo) en el futuro utilizando el método
-        de Eickmeier. Es importante destacar que este método se basa en la recopilación de datos y cálculos
-        matemáticos para obtener estimaciones más precisas de la producción futura del pozo.<br><br>
-
-        4) Modelo matemático: La ventaja de este modelo es que combina los métodos de Fetkovich y Vogel, que son
-        ampliamente reconocidos en la industria y han demostrado ser efectivos para predecir la producción. Al
-        combinar estos métodos, se tiene en cuenta tanto la relación entre la tasa de producción y la presión de
-        fondo fluyente, como la tasa de producción máxima.<br><br>
-      </p>
-
+    <div class="parrafos" style="opacity: 100%; margin-bottom: 0;">
+      <h1 style="text-align: center;"> Método de Eickmeier </h1>
+      <table style="width: 100%;" cellpading="0" cellspacing="0">
+        <tr>
+          <td
+            style="width: 50%; vertical-align: top; text-align: justify; padding-right: 20px; border-right: solid 2px black;">
+            <p style="color: black">
+              <span>Antecedentes</span><br> El método de Fetkovich es una técnica ampliamente utilizada en la industria
+              del
+              petróleo y gas para predecir el comportamiento de producción de un pozo a lo largo del tiempo. Este
+              método se basa en el análisis de la presión y la tasa de flujo de fluido en el yacimiento.
+            </p>
+            <p>
+              La producción de un pozo está influenciada por varios factores, como la permeabilidad del yacimiento, la
+              porosidad, el tipo de fluido presente y la geometría del yacimiento. A medida que se extrae el fluido
+              del yacimiento, la presión disminuye, lo que afecta la tasa de flujo de producción. El método de
+              Eickmeier utiliza modelos matemáticos y análisis estadísticos para predecir cómo cambiará la tasa de
+              producción a medida que varía la presión.
+            </p>
+            <P>
+              <span>Objetivos</span><br> El objetivo del método de Eickmeier es proporcionar una herramienta eficaz para
+              predecir
+              el comportamiento de producción futura de un pozo en la industria del petróleo y gas. Al combinar los
+              métodos de Fetkovich y Vogel, este enfoque busca brindar a los ingenieros de reservorios una comprensión
+              clara del potencial de producción de un pozo y permitirles planificar las operaciones de producción de
+              manera eficiente.
+            </P>
+            <p>
+              El objetivo final del método de Eickmeier es mejorar la eficiencia de la producción y optimizar la
+              recuperación de hidrocarburos del yacimiento. Al proporcionar a los ingenieros de reservorios una
+              comprensión clara del potencial de producción de un pozo, les permite planificar las operaciones de
+              producción de manera eficiente y tomar decisiones informadas sobre estrategias de producción y
+              programación de operaciones. Esto implica ajustar parámetros como la presión de fondo de pozo, la
+              inyección de fluidos y la optimización de la producción para maximizar la recuperación de petróleo y gas
+              del yacimiento.
+            </p>
+          </td>
+          <td style="width: 50%; vertical-align: top; padding-left: 20px;">
+            <p>
+              La metodología del método de Eickmeier, que combina los métodos de Fetkovich y Vogel, se puede
+              resumir de la siguiente manera: <br>
+              • Realizar una prueba de producción: Se lleva a cabo una prueba de producción en el pozo para recopilar
+              datos necesarios como la tasa de producción de petróleo (qo), la presión de fondo fluyente (pwf) y la
+              presión de reserva (pr).
+            </p>
+            <p>
+            <ul>
+              <li>
+                Utilizar la ecuación de Vogel: Con los datos obtenidos de la prueba de producción, se utiliza la
+                ecuación de Vogel para determinar la tasa de producción máxima de petróleo (qo(max)P). Esta ecuación
+                tiene en cuenta la relación entre la tasa de producción y la presión de fondo fluyente.
+              </li>
+              <li>
+                Calcular qo(max)F: Utilizando la tasa de producción máxima de petróleo obtenida en el paso anterior
+                (qo(max)P), se calcula la tasa de producción máxima ajustada (qo(max)F) utilizando la siguiente
+                fórmula: qo(max)F = qo(max)P * (pr F / pr P)^3 Donde pr F es la presión de reserva en el futuro y pr P
+                es la
+                presión de reserva actual.
+              </li>
+              <li>
+                Calcular qo F: Finalmente, se calcula la tasa de producción ajustada en el futuro (qo F) utilizando la
+                siguiente fórmula: qo F = qo(max)F * (1 - 0.2 * (pwf / pr F) - 0.8 * (pwf / pr F)^2) Donde pwf es la
+                presión de fondo fluyente en el futuro.
+              </li>
+            </ul>
+            </p>
+            <p>
+              Estos pasos permiten ajustar las tasas de producción de petróleo (qo) en el futuro utilizando el método
+              de Eickmeier. Es importante destacar que este método se basa en la recopilación de datos y cálculos
+              matemáticos para obtener estimaciones más precisas de la producción futura del pozo.
+            </p>
+            <p>
+              <span>Modelo matemático</span> La ventaja de este modelo es que combina los métodos de Fetkovich y Vogel,
+              que son
+              ampliamente reconocidos en la industria y han demostrado ser efectivos para predecir la producción. Al
+              combinar estos métodos, se tiene en cuenta tanto la relación entre la tasa de producción y la presión de
+              fondo fluyente, como la tasa de producción máxima.
+            </p>
+          </td>
+        </tr>
+      </table>
       <img src="{{ url_for('static', path='img/eickemer.jpeg') }}" alt="">
     </div>
 
-    <form id="miFormulario" style="width: 500px;">
-      <label for="qo">
-        <p>Gasto de aceite (Qo)<br></p>
-      </label>
-      <input type="text" id="qo" name="qo" pattern="^[-+]?\d+(\.\d+)?$" required class="field"><br>
+    <div class="container mt-5">
+      <div class="row">
+        <!-- Columna del formulario -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Formulario</h5>
+              <form>
+                <div class="mb-3">
+                  <label for="qo">
+                    Gasto de aceite (qo)
+                  </label>
+                  <input type="text" id="qo" name="qo" pattern="^[-+]?\d+(\.\d+)?$" required class="field">
+                </div>
+                <div class="mb-3">
+                  <label for="prP">
+                    Presion presente media
+                  </label>
+                  <input type="text" id="prP" name="prP" pattern="^[-+]?\d+(\.\d+)?$" required class="field">
+                </div>
 
-      <label for="prP"><br>
-        <p>Presion media Presente o pws presente<br></p>
-      </label>
-      <input type="text" id="prP" name="prP" pattern="^[-+]?\d+(\.\d+)?$" required class="field"><br>
+                <div class="mb-3">
+                  <label for="pwfP">
+                    Presion de fondo presente
+                  </label>
+                  <input type="text" id="pwfP" name="pwfP" pattern="^[-+]?\d+(\.\d+)?$" required class="field">
+                </div>
 
-      <label for="pwf"><br>
-        <p>Presion de fondo fluyente (pwf)<br></p>
-      </label>
-      <input type="text" id="pwf" name="pwf" pattern="^[-+]?\d+(\.\d+)?$" required class="field"><br>
+                <div class="mb-3">
+                  <label for="pwfF">
+                    Presion de fondo futura
+                  </label>
+                  <input type="text" id="pwfF" name="pwfF" pattern="^[-+]?\d+(\.\d+)?$" required class="field">
+                </div>
+
+                <div class="mb-3">
+                  <label for="prF">
+                    Presion futura media
+                  </label>
+                  <input type="text" id="prF" name="prF" pattern="^[-+]?\d+(\.\d+)?$" required class="field">
+                </div>
+
+                <div class="mb-3">
+                  <label for="n">
+                    Numero de puntos (grafica)
+                  </label>
+                  <input type="text" id="n" name="n" pattern="^[-+]?\d+$" required class="field" maxlength="2">
+                </div>
+              </form>
+              <div class="mb-3" style="text-align: center;">
+                <button type="button" class="btn  btn-success" id="calcular">Calcular</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
-      <label for="prF"><br>
-        <p>Presion media futura o pws futura<br></p>
-      </label>
-      <input type="text" id="prF" name="prF" pattern="^[-+]?\d+(\.\d+)?$" required class="field"><br>
-
-    </form>
-    <div style="margin-top: 10px;">
-      <button type="button" class="btn  btn-success" id="calcular">Calcular</button>
+        <!-- Columna de gráficos -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body d-flex flex-wrap justify-content-center align-items-center">
+              <div style="width: 300px; height: 250px; margin: 10px;" class="text-center">
+                <h6 class="card-subtitle mb-2 text-muted">Gráfico Presion futura</h6>
+                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                  data-bs-target="#modalGrafico1">
+                  <i class="fas fa-plus"></i> Abrir
+                </button>
+                <canvas id="myChart"></canvas>
+              </div>
+              <div style="width: 300px; height: 250px; margin: 10px;" class="text-center">
+                <h6 class="card-subtitle mb-2 text-muted">Gráfico Saturada</h6>
+                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                  data-bs-target="#modalGrafico2">
+                  <i class="fas fa-plus"></i> Abrir
+                </button>
+                <canvas id="myChart2"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>>
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Resultados del metodo</h5>
+              <div id="results"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- <canvas id="myChart"></canvas> -->
-    <script src="{{ url_for('static', path='js/Eickmeier.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{{ url_for('static', path='js/jquery.min.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-      </script>
+    <!-- Modales para los gráficos -->
+    <div class="modal fade" id="modalGrafico1" tabindex="-1" aria-labelledby="modalGrafico1Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalGrafico1Label">Gráfico Bajo Saturada</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <canvas id="modalChart1"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalGrafico2" tabindex="-1" aria-labelledby="modalGrafico2Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalGrafico2Label">Gráfico Saturada</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <canvas id="modalChart2"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-      </script>
+    <footer>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="{{ url_for('static', path='js/Eickmeier.js') }}"></script>
+      <!--<script src="{{ url_for('static', path='js/graficasVogel.js') }}"></script> -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+      <script src="{{ url_for('static', path='js/jquery.min.js') }}"></script>
+    </footer>
+
 </body>
 
 </html>

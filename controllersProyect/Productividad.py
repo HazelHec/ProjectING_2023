@@ -63,7 +63,7 @@ async def indexEickmeier(request: Request):
 @productividad.post("/productividad/eickmeier", tags=["Productividad"])
 async def eickmeier(data: EickmeierModel):
     metodo = Eickmeier()
-    response = metodo.defaultMethod(data.qo, data.prP, data.pwf, data.prF)
+    response = metodo.eickmeier(data.qo, data.prP, data.pwfP, data.pwfF, data.prF, data.n)
     return EickmeierResponseModel(**response)
 
 

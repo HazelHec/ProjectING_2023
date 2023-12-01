@@ -31,88 +31,217 @@
     </nav>
   </header>
 
+
   <div id="contenedor_principal2">
-    <div class="parrafos">
-      <h1> Método de Vogel <br><br></h1>
-      <p style="color: black">
-        <br>1.- Antecedentes: El método de Vogel es una técnica ampliamente utilizada en la industria del
-        petróleo y gas para generar una curva de Índice de Productividad (IPR), que representa la relación entre
-        la tasa de producción de petróleo y la presión de fondo fluyente en un pozo.<br><br>
-        Esta curva es una herramienta esencial para entender el potencial de producción de un pozo y para
-        planificar las operaciones de producción. <br><br>
-        2.- Objetivos: El objetivo principal de este trabajo es aplicar el método de Vogel para generar la curva
-        IPR de un pozo de petróleo específico.<br><br>
-        Esto nos permitirá entender el potencial de producción del pozo y predecir su comportamiento de
-        producción para diferentes presiones de fondo fluyente. <br><br>
-        Además, buscaremos identificar cualquier variación en la tasa de producción de petróleo con la presión
-        de fondo fluyente que pueda indicar problemas potenciales en el pozo.<br><br>
-        3.- Metodología: <br><br>
-        a: Recopilación de datos:<br><br>
-        Presión estática del yacimiento.<br><br>
-        Presión de fondo fluyente.<br><br>
-        Tasa de producción de petróleo.<br><br>
-        b: Utilización de la ecuación de Vogel:<br><br>
-        Calcularemos el Índice de Productividad utilizando la ecuación de Vogel.<br><br>
-        Calcularemos la tasa de producción de petróleo para diferentes presiones de fondo fluyente utilizando la
-        misma ecuación.<br><br>
-        c: Generación de la curva IPR:<br><br>
-        Utilizaremos los datos obtenidos para generar la curva IPR (Índice de Productividad vs. Presión de fondo
-        fluyente).<br><br>
-        4: Modelo matemático: El modelo matemático se basa en una serie de ecuaciones que calculan la tasa de
-        producción de petróleo para diferentes presiones de fondo fluyente. <br><br>
-        Maximiza el potencial petrolero con el método de Vogel: predice y optimiza<br><br><br><br>
-      </p>
-      <img src="{{ url_for('static', path='img/Vogel.jpeg') }}" alt="">
-
+    <div class="parrafos" style="opacity: 100%; margin-bottom: 0;">
+      <h1 style="text-align: center;"> Método de Vogel </h1>
+      <table style="width: 100%;" cellpading="0" cellspacing="0">
+        <tr>
+          <td
+            style="width: 50%; vertical-align: top; text-align: justify; padding-right: 20px; border-right: solid 2px black;">
+            <p style="color: black;">
+              1.- Antecedentes: El método de Vogel es una técnica ampliamente utilizada en la industria del
+              petróleo y gas para generar una curva de Índice de Productividad (IPR), que representa la relación entre
+              la tasa de producción de petróleo y la presión de fondo fluyente en un pozo.</p>
+            <p>
+              Esta curva es una herramienta esencial para entender el potencial de producción de un pozo y para
+              planificar las operaciones de producción.
+            </p>
+            <p>
+              2.- Objetivos: El objetivo principal de este trabajo es aplicar el método de Vogel para generar la curva
+              IPR de un pozo de petróleo específico.
+            </p>
+            <p>
+              Esto nos permitirá entender el potencial de producción del pozo y predecir su comportamiento de
+              producción para diferentes presiones de fondo fluyente.
+            </p>
+            <p>
+              Además, buscaremos identificar cualquier variación en la tasa de producción de petróleo con la presión
+              de fondo fluyente que pueda indicar problemas potenciales en el pozo.
+            </p>
+            <img src="{{ url_for('static', path='img/Vogel.jpeg') }}" alt="vogel" width="100%">
+          </td>
+          <td style="width: 50%; vertical-align: top; padding-left: 20px;">
+            <p>
+              3.- Metodología:
+            </p>
+            <p>
+              a: Recopilación de datos:
+            <ul>
+              <li>
+                Presión estática del yacimiento.
+              </li>
+              <li>
+                Presión de fondo fluyente.
+              </li>
+              <li>
+                Tasa de producción de petróleo.
+              </li>
+            </ul>
+            </p>
+            <p>
+              b: Utilización de la ecuación de Vogel:
+            <ul>
+              <li>
+                Calcularemos el Índice de Productividad utilizando la ecuación de Vogel.
+              </li>
+              <li>
+                Calcularemos la tasa de producción de petróleo para diferentes presiones de fondo fluyente utilizando la
+                misma ecuación.
+              </li>
+              <li>
+                Calcularemos el Índice de Productividad utilizando la ecuación de Vogel.
+              </li>
+            </ul>
+            </p>
+            <p>
+              c: Generación de la curva IPR:
+            <ul>
+              <li>
+                Utilizaremos los datos obtenidos para generar la curva IPR (Índice de Productividad vs. Presión de fondo
+                fluyente)
+              </li>
+            </ul>
+            </p>
+            <p>
+              4: Modelo matemático: El modelo matemático se basa en una serie de ecuaciones que calculan la tasa de
+              producción de petróleo para diferentes presiones de fondo fluyente.
+              Maximiza el potencial petrolero con el método de Vogel: predice y optimiza
+            </p>
+          </td>
+        </tr>
+      </table>
     </div>
-    <div style="margin-bottom: 10px;">
-      <form id="miFormulario" style="width: 500px;">
+    <div class="container mt-5">
+      <div class="row">
+        <!-- Columna del formulario -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Formulario</h5>
+              <form>
+                <div class="mb-3">
+                  <label for="qo">
+                    Gasto de aceite (qo)
+                  </label>
+                  <input type="text" id="qo" name="qo" pattern="^[-+]?\d+(\.\d+)?$" required class="field">
+                </div>
+                <div class="mb-3">
+                  <label for="pr">
+                    Pws o presión media del yacimiento
+                  </label>
+                  <input type="text" id="pr" name="pr" pattern="^[-+]?\d+(\.\d+)?$" required class="field">
+                </div>
 
-        <label for="qo">
-          <p>Gasto de aceite (qo)<br></p>
-        </label>
-        <input type="text" id="qo" name="qo" pattern="^[-+]?\d+(\.\d+)?$" required class="field"><br>
+                <div class="mb-3">
+                  <label for="pwf">
+                    Presion de fondo fluyente
+                  </label>
+                  <input type="text" id="pwf" name="pwf" pattern="^[-+]?\d+(\.\d+)?$" required class="field">
+                </div>
 
-        <label for="pr">
-          <p>Pws o presión media del yacimiento<br></p>
-        </label>
-        <input type="text" id="pr" name="pr" pattern="^[-+]?\d+(\.\d+)?$" required class="field"><br>
+                <div class="mb-3">
+                  <label for="pb">
+                    Presion de burbuja
+                  </label>
+                  <input type="text" id="pb" name="pb" pattern="^[-+]?\d+(\.\d+)?$" required class="field">
+                </div>
 
-        <label for="pwf"><br>
-          <p>Presion de fondo fluyente <br></p>
-        </label>
-        <input type="text" id="pwf" name="pwf" pattern="^[-+]?\d+(\.\d+)?$" required class="field"><br>
+                <div class="mb-3">
+                  <label for="r">
+                    Numero de puntos (grafica)
+                  </label>
+                  <input type="text" id="r" name="r" pattern="^[-+]?\d+$" required class="field" maxlength="2">
+                </div>
+              </form>
+              <div class="mb-3" style="text-align: center;">
+                <button type="button" class="btn  btn-success" id="calcular">Calcular</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <label for="pb"><br>
-          <p>Presion de burbuja<br></p>
-        </label>
-        <input type="text" id="pb" name="pb" pattern="^[-+]?\d+(\.\d+)?$" required class="field"><br>
 
-        <label for="r"><br>
-          <p>Numero de puntos (grafica)<br></p>
-        </label>
-        <input type="text" id="r" name="r" pattern="^[-+]?\d+$" required class="field" maxlength="2"><br>
+        <!-- Columna de gráficos -->
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body d-flex flex-wrap justify-content-center align-items-center">
+              <div style="width: 300px; height: 250px; margin: 10px;" class="text-center">
+                <h6 class="card-subtitle mb-2 text-muted">Gráfico Bajo Saturada</h6>
+                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                  data-bs-target="#modalGrafico1">
+                  <i class="fas fa-plus"></i> Abrir
+                </button>
+                <canvas id="myChart"></canvas>
+              </div>
 
-      </form>
+              <div style="width: 300px; height: 250px; margin: 10px;" class="text-center">
+                <h6 class="card-subtitle mb-2 text-muted">Gráfico Saturada</h6>
+                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                  data-bs-target="#modalGrafico2">
+                  <i class="fas fa-plus"></i> Abrir
+                </button>
+                <canvas id="myChart2"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Resultados del metodo</h5>
+              <div id="results"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <button type="button" class="btn  btn-success" id="calcular">Calcular</button>
+    <!-- Modales para los gráficos -->
+    <div class="modal fade" id="modalGrafico1" tabindex="-1" aria-labelledby="modalGrafico1Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalGrafico1Label">Gráfico Bajo Saturada</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <canvas id="modalChart1"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="modal fade" id="modalGrafico2" tabindex="-1" aria-labelledby="modalGrafico2Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalGrafico2Label">Gráfico Saturada</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <canvas id="modalChart2"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="{{ url_for('static', path='js/Vogel.js') }}"></script>
+      <!--<script src="{{ url_for('static', path='js/graficasVogel.js') }}"></script> -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+      <script src="{{ url_for('static', path='js/jquery.min.js') }}"></script>
+    </footer>
 
-    <canvas id="myChart"></canvas>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{{ url_for('static', path='js/Vogel.js') }}"></script>
-    <!--<script src="{{ url_for('static', path='js/graficasVogel.js') }}"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-      </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-      </script>
-    <script src="{{ url_for('static', path='js/jquery.min.js') }}"></script>
 </body>
 
 </html>

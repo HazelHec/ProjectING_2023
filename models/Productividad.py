@@ -36,6 +36,8 @@ class BackPressureResponseModel(BaseModel):
     m: float # pendiente
     n: float # inversa de la pendiente 
     c: float # constante
+    pendiente: float # constante
+    varianza: float # constante
     lpwf: List[float] # lista de valores de pwf
     lqg: List[float] # Lista de valores de qg
 
@@ -43,14 +45,20 @@ class BackPressureResponseModel(BaseModel):
 class EickmeierModel(BaseModel):
     qo: float  # bpd gasto de aceite
     prP: float  # Presión del yacimiento actual
-    pwf: float  # Presion de fondo fluyente psia
+    pwfP: float  # Presion de fondo fluyente psia
+    pwfF: float # Presion de fondo futura
     prF: float  # Presión del yacimiento futura
+    n: int # iterador
 
 
 class EickmeierResponseModel(BaseModel):
     qoMaxP: float  # Gasto maximo presente
     qoMaxF: float  # Gasto maximo futuro
     qoF: float  # Gasto Maximo
+    lpwfP: List[float] # lista deb presiones
+    lpwfF: List[float] # lista deb presiones
+    lqoP: List[float] # lista gastos
+    lqoF: List[float] #Lista de gastos
 
 
 class StandingModel(BaseModel):

@@ -11,7 +11,8 @@ from fastapi.staticfiles import StaticFiles
 
 templates = Jinja2Templates(directory="templates/")
 
-engi = FastAPI()
+engi = FastAPI(debug=True)
+
 for router in routers:
     engi.include_router(router)
 

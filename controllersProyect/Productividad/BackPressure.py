@@ -1,4 +1,6 @@
 import math as mt
+import numpy as np
+from scipy.stats import linregress
 
 
 class BackPressure:
@@ -10,7 +12,7 @@ class BackPressure:
             pow(pr, 2) - pow(pwf1, 2), 10
         )
         b = mt.log(qg2, 10) - mt.log(qg1, 10)
-        
+
         # Calcular m
         m = a / b  # Esta es m
 
@@ -19,7 +21,7 @@ class BackPressure:
 
         # Calculo de C
         c = qg1 / pow(pow(pr, 2) - pow(pwf1, 2), n)
-        
+
         # Calculo de qg
         pwf = [pr]
         for i in range(1, r + 1):
@@ -34,4 +36,17 @@ class BackPressure:
             pwf[aux2] = round(pow(pr, 2) - pow(pwf[aux2], 2), 3)
             aux2 += 1
 
-        return {"m": m, "n": n, "c": c, "lpwf": pwf, "lqg": qg}
+        # Obtener pendiente y varianza
+        x = np.array(qg)  # Convierte x en un arreglo NumPy
+        y = np.array(pwf)
+        slope, intercept, r_value, p_value, std_err = linregress(x, y)
+        variance = np.var(y)
+        return {
+            "m": m,
+            "n": n,
+            "c": c,
+            "pendiente": slope,
+            "varianza": variance,
+            "lpwf": pwf,
+            "lqg": qg,
+        }
