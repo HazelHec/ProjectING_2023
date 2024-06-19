@@ -1,12 +1,13 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 from fastapi import Request
 from fastapi.templating import Jinja2Templates
 
 # Importar metodos numericos
-from .productividad.Vogel import Vogel
-from .productividad.BackPressure import BackPressure
-from .productividad.Standing import Standing
-from .productividad.Eickmeier import Eickmeier
+from .productividadMetodos.Vogel import Vogel
+from .productividadMetodos.BackPressure import BackPressure
+from .productividadMetodos.Standing import Standing
+from .productividadMetodos.Eickmeier import Eickmeier
+from middleware.jwt_bearer import JWTBearer
 
 # Importar modelos
 from models import *
@@ -28,7 +29,7 @@ async def indexVogel(request: Request):
     return templates.TemplateResponse("/Vogel_generalizado.html", {"request": request})
 
 
-@productividad.post("/productividad/vogel", tags=["Productividad"])
+@productividad.post("/productividad/vogel", tags=["Productividad"], status_code=200, dependencies=[Depends(JWTBearer())])
 async def vogel(data: VogelModel):
     metodo = Vogel()
     if data.pwf >= data.pb:
