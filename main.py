@@ -6,6 +6,9 @@ from fastapi.staticfiles import StaticFiles
 from middleware.errorHandler import ErrorHandler
 from fastapi.responses import JSONResponse
 from jwt_manager import create_token
+from core.configLog import log_config   
+import uvicorn
+
 
 # Crear una instancia de FastAPI
 # NOTE - 
@@ -16,18 +19,19 @@ from jwt_manager import create_token
 templates = Jinja2Templates(directory="templates/")
 
 engi = FastAPI(
-    servers=[
-        # {
-        #     "url" : "engi/apiv1",
-        #     "description" : "local host"
-        # },
-        {
-            "url" : "https://192.168.1.11/engi/apiv1",
-            "description" : "secure path"
-        }
-    ],
+    # servers=[
+    #     # {
+    #     #     "url" : "engi/apiv1",
+    #     #     "description" : "local host"
+    #     # },
+    #     {
+    #         "url" : "https://192.168.1.11/engi/apiv1",
+    #         "description" : "secure path"
+    #     }
+    # ],
     debug=True,
-    root_path="/engi/apiv1")
+    root_path="/engi")
+
 #agregar middleware
 engi.add_middleware(ErrorHandler) #errores del servidor 
 
@@ -57,3 +61,16 @@ async def handle_http_exception(request, exc):
         status_code=exc.status_code,
         content={"mensaje_de_error": exc.detail},
     )
+
+
+#Initialing proyect when exxcute main method
+
+if __name__ == "__main__":
+    uvicorn.run(
+        "main:engi",
+        host="192.168.1.2",
+        port=8443,
+        reload=True,
+        log_config = log_config,
+        use_colors=True
+        )
