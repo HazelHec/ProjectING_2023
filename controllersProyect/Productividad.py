@@ -3,10 +3,10 @@ from fastapi import Request
 from fastapi.templating import Jinja2Templates
 
 # Importar metodos numericos
-from .productividad.Vogel import Vogel
-from .productividad.BackPressure import BackPressure
-from .productividad.Standing import Standing
-from .productividad.Eickmeier import Eickmeier
+from .productividadMetodos.Vogel import Vogel
+from .productividadMetodos.BackPressure import BackPressure
+from .productividadMetodos.Standing import Standing
+from .productividadMetodos.Eickmeier import Eickmeier
 
 # Importar modelos
 from models import *
